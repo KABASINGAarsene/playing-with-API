@@ -1,0 +1,19 @@
+.abouttitle{
+    font-size:50px;
+    font-family:'poppins', sans-serif;
+    font-weight: bolder;
+    color:rgb(245,238,132) ;
+    margin-bottom: 10px;
+}
+
+.aboutdescription{
+    font-size:20px;
+    font-family: 'poppins', sans-serif;
+    color:rgb(3,4,94);
+    font-weight:700;
+    width:700px;
+}
+ 
+.about{
+    margin-bottom: 80px;
+}

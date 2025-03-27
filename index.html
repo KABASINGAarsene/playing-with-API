@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fithub</title>
+    <link rel="stylesheet" href ="css/navigation.css">
+    <link rel="stylesheet" href ="css/general.css">
+    <link rel="stylesheet" href ="css/aboutus.css">
+    <link rel="stylesheet" href ="css/services.css">
+    <link rel="stylesheet" href ="css/contact.css">
+    <link rel="stylesheet" href ="css/responsive.css">
+    <link rel="stylesheet" href ="css/apidata.css">
+
+</head>
+<body>
+    <nav>
+        <div
+        class="headernavigation">
+        <div class="menu-icon" onclick="toggleMenu()"><img class="icon" src="pics/three-bars-icon-6.jpg"></div>
+            <ul id="nav-links">
+                <li>Fithub</li>
+                <li>About Us</li>
+                <li>Workouts</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <div class="header content">
+            <p class="title">Join Kigali's Top Digital Fitness Platform</p>
+            <p class="description">
+                Elevate your workout experience with Kigali's premier online fitness community, offering expert guidance and personalized training.
+            </p>
+        </div>
+        <div class="button">
+            <button class="btn">Get Started</button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="about">
+            <p class="abouttitle">About Us.</p>
+            <p class="aboutdescription">Unlock your potential with our online fitness platform, tailored for the vibrant Kigali community. From personalized workout plans, we provide a comprehensive approach to wellness that fits your schedule. Join us today and transform your fitness journey, fostering health and vitality from the comfort of your home.</p>
+        </div>
+
+        <div class="container">
+            <div class="card">
+              <img src="/pics/biceps.jpg" alt="Arm Exercises" class="card-img">
+              <p class="card-text">Arm Exercises</p>
+              <button class="card-btn" onclick="fetchExercises('biceps')">Get Started</button>
+            </div>
+          
+            <div class="card">
+              <img src="/pics/chest-exercises-1.jpg" alt="Chest Exercises" class="card-img">
+              <p class="card-text">Chest Exercises</p>
+              <button class="card-btn" onclick="fetchExercises('chest')">Get Started</button>
+            </div>
+          
+            <div class="card">
+              <img src="/pics/what-are-abs.jpg" alt="Abs Exercises" class="card-img">
+              <p class="card-text">Abs Exercises</p>
+              <button class="card-btn" onclick="fetchExercises('abdominals')">Get Started</button>
+            </div>
+
+            <div class="card">
+                <img src="/pics/legs.jpg" alt="legs Exercises" class="card-img">
+                <p class="card-text">Legs Exercises</p>
+                <button class="card-btn" onclick="fetchExercises('quadriceps')">Get Started</button>
+              </div>
+          </div>
+    </div>
+    
+          
+          <!-- The div where API data will be displayed -->
+          <div id="exercise-info" class="exercise-info"></div>
+          <script src="prac.js"></script>
+          <div class="contact-container" id="contactContainer">
+            <p class="contact">Contact Us</p>
+            <div class="contactform">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+    <script src="javascript/fetching.js"></script>
+    <script src="javascript/contactsection.js"></script>
+</body>
+</html>
