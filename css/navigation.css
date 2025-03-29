@@ -1,74 +1,96 @@
-.headernavigation ul {
+
+
+ .headernavigation ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center navigation links */
     align-items: center;
+    gap: 20px; /* Space between items */
 }
 
-
 .headernavigation li {
-    margin: 0 10px;
-    font-size:25px;
-    font-family: 'poppins', sans-serif;
-    color:white;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    cursor: pointer;
+}
 
-    }
-
-nav{
-    background-image: url("/pics/headerbackground.jpg");
-    background-size:contain;
-    background-position: center c;
+/* Navbar Background and Layout */
+nav {
+    position: relative; /* Needed for overlay */
+    background-image: url("/playing-with-API/pics/headerbackground.jpg");
+    background-size: cover;  /* Ensures image covers entire area */
+    background-position: center;
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-attachment: scroll;  
-    
-    
+    background-attachment: scroll;
+    color: white;
 }
 
-.title{
-    font-size:35px;
-    color:rgb(0, 102, 97);
+/* Background overlay for better text visibility */
+nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0;
+    border-radius: 10px;
+}
+
+/* Ensure content appears above overlay */
+.headernavigation,
+.header.content,
+.button {
+    position: relative;
+    z-index: 1;
+}
+
+/* Title Styling */
+.title {
+    font-size: 35px;
+    color: white;
     font-weight: bold;
-    font-family: 'poppins', sans-serif;
-
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
-.description{
-    font-size:20px;
-    color:rgb(0, 102, 97);
+/* Description Styling */
+.description {
+    font-size: 20px;
+    color: white;
     font-weight: bold;
-    font-family: 'poppins', sans-serif;
-    max-width:100%;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
-.btn{
+/* Button Styling */
+.button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
     background-color: blueviolet;
     font-size: 20px;
-    border:none;
-    width:300px;
-    height:50px;
+    border: none;
+    width: 250px;
+    height: 50px;
     border-radius: 25px;
     color: white;
-    font-family: 'poppins', sans-serif;
-    margin-left:35%;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease-in-out;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: white;
     color: blueviolet;
 }
- 
-.icon{
-    width:80px; 
-    cursor: pointer;
-    color: white;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-
-
-}
-

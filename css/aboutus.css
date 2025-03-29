@@ -11,7 +11,7 @@
     font-family: 'poppins', sans-serif;
     color:rgb(3,4,94);
     font-weight:700;
-    width:700px;
+    max-width:700px;
 }
  
 .about{
